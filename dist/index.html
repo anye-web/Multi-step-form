@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <!-- main  -->
+    <main>
+      <section class="content">
+        <div class="container content-wrapper">
+          <div class="content-info">
+            <!-- Left side contents -->
+            <ul class="nav-menu">
+              <!-- Step 1 -->
+
+              <li class="progress-steps">
+                <div class="step-content active">1</div>
+                <div class="info">
+                  <p class="step--text">Step 1</p>
+                  <h3 class="tertairy-heading">Your info</h3>
+                </div>
+              </li>
+              <!-- Step 2 -->
+              <li class="progress-steps">
+                <div class="step-content">2</div>
+                <div class="info">
+                  <p class="step--text">Step 2</p>
+                  <h3 class="tertairy-heading">Select plan</h3>
+                </div>
+              </li>
+              <!-- Step 3 -->
+              <li class="progress-steps">
+                <div class="step-content">3</div>
+                <div class="info">
+                  <p class="step--text">Step 3</p>
+                  <h3 class="tertairy-heading">Add ons</h3>
+                </div>
+              </li>
+              <!-- Step 4 -->
+              <li class="progress-steps">
+                <div class="step-content">4</div>
+                <div class="info">
+                  <p class="step--text">Step 4</p>
+                  <h3 class="tertairy-heading">Summary</h3>
+                </div>
+              </li>
+
+              <!-- background -->
+              <!-- <div class="bg-img">
+                <img
+                  src="../assets/images/bg-sidebar-desktop.svg"
+                  alt=""
+                  srcset=""
+                />
+              </div> -->
+            </ul>
+            <!-- Right Side content -->
+            <div class="main-content">
+              <!-- <h1 class="main-title">Personal Info</h1>
+              <p class="lead">
+                Please provide your name, email address, and phone number.
+              </p> -->
+              <!-- Form for information -->
+              <!-- <form class="form">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="e.g Janoh Junior"
+                  />
+                  <small class="error-message">Field is required</small>
+                </div>
+                <div class="form-group">
+                  <label for="email">email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="e.g janohjunior@gmail.com"
+                  />
+                  <small class="error-message">Field is required</small>
+                </div>
+                <div class="form-group">
+                  <label for="phone-number">phone number</label>
+                  <input
+                    type="text"
+                    name="phone-number"
+                    id="phone-number"
+                    class="form-control"
+                    placeholder="e.g +1 651 253 1936"
+                    inputmode="numeric"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                  />
+                  <small class="error-message">Field is required</small>
+                </div>
+              </form> -->
+              <!-- End of form -->
+
+              <!-- Plan  -->
+              <!--  <div class="plan-content">
+                <div class="plan-wrapper">
+                  <div class="plan-content__info plan-active" id="arcade">
+                    <img
+                      src="../assets/images/icon-arcade.svg"
+                      alt=""
+                      class="img"
+                    />
+
+                    <h3 class="secondary-heading">Advance</h3>
+                    <p class="plan-txt">$9/mo</p>
+                  </div>
+                  <div class="plan-content__info" id="advance">
+                    <img
+                      src="../assets/images/icon-advanced.svg"
+                      alt=""
+                      class="img"
+                    />
+
+                    <h3 class="secondary-heading">Advance</h3>
+                    <p class="plan-txt">$12/mo</p>
+                  </div>
+                  <div class="plan-content__info" id="pro">
+                    <img
+                      src="../assets/images/icon-pro.svg"
+                      alt=""
+                      class="img"
+                    />
+
+                    <h3 class="secondary-heading">Pro</h3>
+                    <p class="plan-txt">$15/mo</p>
+                  </div>
+                </div>-->
+
+              <!-- Toggle switch -->
+              <!-- <div class="plan-content__toggle">
+                  <p class="monthly toggle__active">Monthly</p>
+                  <label class="plan__switch">
+                    <input type="checkbox" class="plan__input" />
+                    <span class="plan__slider"></span>
+                  </label>
+                  <p class="year">Year</p>
+                </div>
+              </div>   -->
+              <!--End of Plan  -->
+
+              <!-- Add-ons -->
+              <!--       
+              <div class="add-ons__content">
+                <label class="add-ons__checkbox">
+                  <div class="add-ons__info--left">
+                    <input type="checkbox" id="check__input" checked />
+                    <span class="add-ons__checkmark">
+                      <ion-icon
+                        class="check__icon"
+                        name="checkmark-done-outline"
+                      ></ion-icon>
+                    </span>
+                    <div class="add-ons__msg">
+                      <h3 class="secondary-heading">Online Service</h3>
+                      <p class="plan-txt">Access to multiplyer games</p>
+                    </div>
+                  </div>
+                  <div class="add-ons__info--right">
+                    <p class="add-ons__price">+$1/mo</p>
+                  </div>
+                </label> -->
+
+              <!-- )wo -->
+              <!-- <label class="add-ons__checkbox">
+                  <div class="add-ons__info--left">
+                    <input type="checkbox" id="check__input" />
+                    <span class="add-ons__checkmark">
+                      <ion-icon
+                        class="check__icon"
+                        name="checkmark-done-outline"
+                      ></ion-icon>
+                    </span>
+                    <div class="add-ons__msg">
+                      <h3 class="secondary-heading">Larger Storage</h3>
+                      <p class="plan-txt">Extra 1TB of cloud save</p>
+                    </div>
+                  </div>
+                  <div class="add-ons__info--right">
+                    <p class="add-ons__price">+$2/mo</p>
+                  </div>
+                </label> -->
+
+              <!-- )ne -->
+              <!-- <label class="add-ons__checkbox">
+                  <div class="add-ons__info--left">
+                    <input type="checkbox" id="check__input" />
+                    <span class="add-ons__checkmark">
+                      <ion-icon
+                        class="check__icon"
+                        name="checkmark-done-outline"
+                      ></ion-icon>
+                    </span>
+                    <div class="add-ons__msg">
+                      <h3 class="secondary-heading">Customisable Profile</h3>
+                      <p class="plan-txt">Custom theme on your profile</p>
+                    </div>
+                  </div>
+                  <div class="add-ons__info--right">
+                    <p class="add-ons__price">+$2/mo</p>
+                  </div>
+                </label>
+              </div> -->
+
+              <!--End Add-ons -->
+
+              <!-- Finishing -->
+              <!-- 
+              <div class="finish-content">
+                <div class="finish-content__info">
+                  <div class="finish-content__plan">
+                    <div class="plan__info">
+                      <h3 class="secondary-heading">Arcade (monthly)</h3>
+                      <a href="" class="change__plan">Change</a>
+                    </div>
+                    <div class="plan__price">
+                      <p class="secondary-heading">$9/mo</p>
+                    </div>
+                  </div>
+
+                  <div class="finish-content__services">
+                    <p class="plan-txt">Online service</p>
+                    <p class="services__price">+$1/mo</p>
+                  </div>
+                  <div class="finish-content__services">
+                    <p class="plan-txt">Online service</p>
+                    <p class="services__price">+$2/mo</p>
+                  </div>
+                </div>
+
+                <div class="finish-content__total">
+                  <p class="plan-txt">Total (per month)</p>
+                  <p class="secondary-heading total-amount">+$12/mo</p>
+                </div>
+              </div> -->
+
+              <!-- End of Finishing -->
+
+              <!-- Thank You  -->
+              <div class="content__thank-you">
+                <img
+                  src="../assets/images/icon-thank-you.svg"
+                  alt=""
+                  class="thank__img"
+                />
+                <h2 class="thank-you__heading">Thank you!</h2>
+                <p class="thank-txt">
+                  Thanks for confirming your subscription! We hope you have fun
+                  using our platform. If you ever need support, please feel free
+                  to email us at
+                  <a href="mailto:janohjunior@gmail.com"
+                    >janohjunior@gmail.com.</a
+                  >
+                </p>
+              </div>
+              <!--End of Thank You  -->
+
+              <!-- Button -->
+              <div class="btn-container">
+                <button class="btn btn-outline" type="button">go back</button>
+                <button class="btn btn-full" type="button">Next step</button>
+              </div>
+              <!--End of Button -->
+            </div>
+          </div>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Anye Jr</a>.
+        </div>
+      </section>
+    </main>
+
+    <!-- Script  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

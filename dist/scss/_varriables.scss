@@ -1,0 +1,80 @@
+// Primary color
+$marine-blue__clr: hsl(213, 96%, 18%);
+$demain__clr: hsla(213, 96%, 18%, 1);
+
+$purplish-blue__clr: hsl(243, 100%, 62%);
+$pastel-blue__clr: hsl(228, 100%, 84%);
+$light-blue: hsl(206, 94%, 87%);
+$strawberry-red: hsl(354, 84%, 57%);
+
+// Neutral
+$cool-gray__clr: hsl(231, 11%, 63%);
+$light-gray__clr: hsl(229, 24%, 87%);
+$magnolia__clr: hsl(217, 100%, 97%);
+$ablabaster__clr: hsl(231, 100%, 99%);
+$white__clr: hsl(0, 0%, 100%);
+
+$transition_5s: all 0.3s ease-in;
+
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-icon {
+  --ionicon-stroke-width: 32px;
+}
+
+.active {
+  border: none !important;
+  background-color: $light-blue !important;
+  color: $marine-blue__clr !important;
+}
+.show {
+  display: block !important;
+}
+
+.plan-active {
+  background-color: $magnolia__clr !important;
+  border-color: $purplish-blue__clr !important;
+}
+.hide {
+  display: none;
+}
+
+.toggle__active {
+  color: $demain__clr;
+}
+.tertairy-heading {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: $white__clr;
+}
+
+.secondary-heading {
+  font-size: 1.6rem;
+  color: $marine-blue__clr;
+  font-weight: 600;
+}
+.plan-txt {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.main-title {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  line-height: 3.7rem;
+  color: $demain__clr;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.lead {
+  line-height: 2.7rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 3.5rem;
+}

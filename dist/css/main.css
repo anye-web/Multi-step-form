@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+ion-icon {
+  --ionicon-stroke-width: 32px;
+}
+
+.active {
+  border: none !important;
+  background-color: hsl(206, 94%, 87%) !important;
+  color: hsl(213, 96%, 18%) !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.plan-active {
+  background-color: hsl(217, 100%, 97%) !important;
+  border-color: hsl(243, 100%, 62%) !important;
+}
+
+.hide {
+  display: none;
+}
+
+.toggle__active {
+  color: hsl(213, 96%, 18%);
+}
+
+.tertairy-heading {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.secondary-heading {
+  font-size: 1.6rem;
+  color: hsl(213, 96%, 18%);
+  font-weight: 600;
+}
+
+.plan-txt {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.main-title {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  line-height: 3.7rem;
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  line-height: 2.7rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 3.5rem;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Ubuntu", sans-serif;
+  background-color: hsl(217, 100%, 97%);
+  color: hsl(231, 11%, 63%);
+}
+
+.attribution {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+.attribution a {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.content {
+  height: 100vh;
+  background-color: hsl(217, 100%, 97%);
+}
+.content-wrapper {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-info {
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.6rem;
+  border-radius: 1.5rem;
+}
+.content-info .nav-menu {
+  min-height: 100%;
+  background: url(../../assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-color: hsl(243, 100%, 62%);
+  padding: 3.2rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.content-info .nav-menu .progress-steps {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 3.1rem;
+}
+.content-info .nav-menu .progress-steps .step-content {
+  height: 3.3rem;
+  width: 3.3rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  line-height: 1.6rem;
+  text-transform: uppercase;
+}
+.content-info .nav-menu .progress-steps .info .step--text {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: hsl(206, 94%, 87%);
+}
+.content .main-content {
+  margin: 5.6rem 10rem;
+  margin-bottom: 0;
+  position: relative;
+}
+.content .main-content .form-group {
+  margin-bottom: 2.4rem;
+  position: relative;
+}
+.content .main-content .form-group label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: hsl(213, 96%, 18%);
+  text-transform: capitalize;
+}
+.content .main-content .form-control {
+  width: 100%;
+  padding: 1.5rem 1.6rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: hsl(213, 96%, 18%);
+  outline-color: transparent;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.content .main-content .form-control:active, .content .main-content .form-control:focus {
+  border-color: hsl(243, 100%, 62%);
+}
+.content .main-content .form .error-message {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: hsl(354, 84%, 57%);
+  display: none;
+  position: absolute;
+  bottom: -2.4rem;
+  right: 0;
+}
+.content .btn-container {
+  padding: 6rem 0 1.6rem 0;
+  width: 100%;
+}
+.content .btn-container .btn {
+  display: inline-block;
+  padding: 1.6rem 2.4rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  text-transform: capitalize;
+  transition: all 0.3s ease-in;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.content .btn-container .btn-outline {
+  background: transparent;
+  color: hsl(231, 11%, 63%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.content .btn-container .btn-outline:hover {
+  color: hsl(213, 96%, 18%);
+}
+.content .btn-container .btn-full {
+  background-color: hsl(213, 96%, 18%);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.content .btn-container .btn-full:hover {
+  background-color: hsl(243, 100%, 62%);
+}
+.content .plan-content {
+  margin: 4rem 0 3.2rem 0;
+}
+.content .plan-content .plan-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  align-content: start;
+}
+.content .plan-content .plan-wrapper .img {
+  width: 4rem;
+  margin-bottom: 4rem;
+}
+.content .plan-content__info {
+  padding: 2rem 1.6rem;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.content .plan-content__toggle {
+  background: hsl(217, 100%, 97%);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3.2rem;
+  padding: 2rem 0;
+  border-radius: 1rem;
+}
+.content .plan-content__toggle p {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.content .plan-content__toggle .plan__switch {
+  position: relative;
+  display: inline-block;
+  width: 3.8rem;
+  height: 2rem;
+}
+.content .plan-content__toggle .plan__switch .plan__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.content .plan-content__toggle .plan__switch .plan__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsl(213, 96%, 18%);
+  transition: all 0.3s ease-in;
+  border-radius: 1rem;
+}
+.content .plan-content__toggle .plan__switch .plan__slider::before {
+  content: "";
+  position: absolute;
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: hsl(0, 0%, 100%);
+  transition: all 0.3s ease-in;
+  left: 0.4rem;
+  bottom: 0.4rem;
+  border-radius: 50%;
+}
+.content .plan-content__toggle .plan__switch .plan__input:checked + .plan__slider {
+  background: hsl(243, 100%, 62%);
+}
+.content .plan-content__toggle .plan__switch .plan__input:checked + .plan__slider::before {
+  transform: translateX(1.8rem);
+}
+.content .add-ons__checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin-bottom: 1.6rem;
+  border: 1px solid hsl(229, 24%, 87%);
+  background-color: hsl(0, 0%, 100%);
+  transition: all 0.3s ease-in;
+  padding: 1.8rem 2.4rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+  overflow: hidden;
+}
+.content .add-ons__checkbox .add-ons__info--left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.content .add-ons__checkbox .add-ons__checkmark {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  transition: all 0.3s ease-in;
+}
+.content .add-ons__checkbox .add-ons__checkmark .check__icon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  font-size: 1.4rem;
+  color: hsl(0, 0%, 100%);
+  display: none;
+}
+.content .add-ons__checkbox .add-ons__price {
+  color: hsl(243, 100%, 62%);
+}
+.content .add-ons__checkbox #check__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.content .add-ons__checkbox:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+.content .add-ons__checkbox #check__input:checked ~ .add-ons__checkmark {
+  background-color: hsl(243, 100%, 62%);
+  border-color: transparent;
+}
+.content .add-ons__checkbox #check__input:checked ~ .add-ons__checkmark .check__icon {
+  display: block;
+  color: hsl(0, 0%, 100%);
+}
+.content .finish-content__info {
+  margin-bottom: 2.4rem;
+  padding: 2.4rem;
+  background-color: hsl(231, 100%, 99%);
+  border-radius: 2rem;
+}
+.content .finish-content__plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+}
+.content .finish-content__plan .change__plan {
+  display: inline-block;
+  margin-top: 1rem;
+  border-bottom: 1px solid hsl(231, 11%, 63%);
+}
+.content .finish-content__services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+}
+.content .finish-content__services .services__price {
+  font-size: 1.4rem;
+  color: hsl(213, 96%, 18%);
+}
+.content .finish-content__total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-bottom: 2.4rem;
+}
+.content .finish-content__total .total-amount {
+  color: hsl(243, 100%, 62%);
+}
+.content .content__thank-you {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.content .content__thank-you .thank__img {
+  width: 8rem;
+  margin-bottom: 2.4rem;
+}
+.content .content__thank-you .thank-you__heading {
+  font-size: 3.2rem;
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 1.4rem;
+  font-weight: 700;
+  line-height: 3.87rem;
+}
+.content .content__thank-you .thank-txt {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}

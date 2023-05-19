@@ -1,0 +1,411 @@
+@import "reset";
+@import "varriables";
+
+body {
+  font-size: 1.6rem;
+  font-family: "Ubuntu", sans-serif;
+  background-color: $magnolia__clr;
+  color: $cool-gray__clr;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.content {
+  height: 100vh;
+  background-color: $magnolia__clr;
+
+  &-wrapper {
+    min-height: 90vh;
+    @include flexCenter();
+  }
+
+  &-info {
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: $white__clr;
+    padding: 1.6rem;
+    border-radius: 1.5rem;
+
+    .nav-menu {
+      min-height: 100%;
+      background: url(../../assets/images/bg-sidebar-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+
+      background-color: $purplish-blue__clr;
+      padding: 3.2rem;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      position: relative;
+
+      .progress-steps {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        margin-bottom: 3.1rem;
+
+        .step-content {
+          height: 3.3rem;
+          width: 3.3rem;
+          border: 1px solid $white__clr;
+          border-radius: 50%;
+          text-align: center;
+
+          @include flexCenter();
+          font-size: 1.6rem;
+          font-weight: 700;
+          color: $white__clr;
+          line-height: 1.6rem;
+          text-transform: uppercase;
+        }
+        .info {
+          .step--text {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 1.4rem;
+
+            color: $light-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
+    margin: 5.6rem 10rem;
+    margin-bottom: 0;
+    position: relative;
+
+    // Form content
+    .form {
+      &-group {
+        margin-bottom: 2.4rem;
+        position: relative;
+
+        label {
+          display: inline-block;
+          margin-bottom: 1rem;
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: $demain__clr;
+          text-transform: capitalize;
+        }
+      }
+
+      &-control {
+        width: 100%;
+        padding: 1.5rem 1.6rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-family: inherit;
+        color: $demain__clr;
+        outline-color: transparent;
+        border: 1px solid $light-gray__clr;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: $transition-5s;
+
+        &:active,
+        &:focus {
+          border-color: $purplish-blue__clr;
+        }
+      }
+      .error-message {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $strawberry-red;
+        display: none;
+        position: absolute;
+        bottom: -2.4rem;
+        right: 0;
+      }
+    }
+  }
+
+  .btn-container {
+    padding: 6rem 0 1.6rem 0;
+    // position: absolute;
+    // left: 0;
+    // bottom: 0;
+    width: 100%;
+
+    .btn {
+      display: inline-block;
+      padding: 1.6rem 2.4rem;
+      font-family: inherit;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $white__clr;
+      text-transform: capitalize;
+      transition: $transition-5s;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+
+      &-outline {
+        background: transparent;
+        color: $cool-gray__clr;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        &:hover {
+          color: $marine-blue__clr;
+        }
+      }
+
+      &-full {
+        background-color: $marine-blue__clr;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &:hover {
+          background-color: $purplish-blue__clr;
+        }
+      }
+    }
+  }
+
+  // Plan content
+  .plan-content {
+    margin: 4rem 0 3.2rem 0;
+
+    .plan-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      align-content: start;
+
+      .img {
+        width: 4rem;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__info {
+      padding: 2rem 1.6rem;
+      border: 1px solid $light-gray__clr;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+
+    &__toggle {
+      background: $magnolia__clr;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3.2rem;
+      padding: 2rem 0;
+      border-radius: 1rem;
+
+      p {
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+
+      .plan__switch {
+        position: relative;
+        display: inline-block;
+        width: 3.8rem;
+        height: 2rem;
+
+        .plan__input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        .plan__slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: $demain__clr;
+          transition: $transition-5s;
+          border-radius: 1rem;
+
+          &::before {
+            content: "";
+            position: absolute;
+            height: 1.2rem;
+            width: 1.2rem;
+            background-color: $white__clr;
+            transition: $transition-5s;
+            left: 0.4rem;
+            bottom: 0.4rem;
+            border-radius: 50%;
+          }
+        }
+
+        .plan__input:checked + .plan__slider {
+          background: $purplish-blue__clr;
+        }
+        .plan__input:checked + .plan__slider::before {
+          transform: translateX(1.8rem);
+        }
+      }
+    }
+  }
+  // Add ons
+
+  .add-ons__checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 1.6rem;
+
+    border: 1px solid $light-gray__clr;
+    background-color: $white__clr;
+    transition: $transition-5s;
+    padding: 1.8rem 2.4rem;
+    border-radius: 1rem;
+    transition: $transition-5s;
+    overflow: hidden;
+
+    .add-ons__info--left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .add-ons__checkmark {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+      border: 1px solid $light-gray__clr;
+      border-radius: 0.5rem;
+      padding: 0.3rem;
+      transition: $transition-5s;
+
+      .check__icon {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        font-size: 1.4rem;
+        color: $white__clr;
+        display: none;
+      }
+    }
+
+    .add-ons__price {
+      color: $purplish-blue__clr;
+    }
+
+    #check__input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    &:hover {
+      border-color: $purplish-blue__clr;
+    }
+
+    #check__input:checked ~ .add-ons__checkmark {
+      background-color: $purplish-blue__clr;
+      border-color: transparent;
+    }
+
+    #check__input:checked ~ .add-ons__checkmark .check__icon {
+      display: block;
+      color: $white__clr;
+    }
+  }
+
+  .finish-content {
+    &__info {
+      margin-bottom: 2.4rem;
+      padding: 2.4rem;
+      background-color: $ablabaster__clr;
+      border-radius: 2rem;
+    }
+
+    &__plan {
+      @include flexCenter();
+      justify-content: space-between;
+      padding-bottom: 2.4rem;
+      border-bottom: 1px solid $light-gray__clr;
+
+      .change__plan {
+        display: inline-block;
+        margin-top: 1rem;
+        border-bottom: 1px solid $cool-gray__clr;
+      }
+    }
+
+    &__services {
+      @include flexCenter;
+      justify-content: space-between;
+      padding: 1.6rem 0;
+
+      .services__price {
+        font-size: 1.4rem;
+        color: $demain__clr;
+      }
+    }
+
+    &__total {
+      @include flexCenter;
+      justify-content: space-between;
+      padding: 0 2.4rem;
+      margin-bottom: 2.4rem;
+
+      .total-amount {
+        color: $purplish-blue__clr;
+      }
+    }
+  }
+
+  .content__thank-you {
+    height: 100%;
+    @include flexCenter;
+    flex-direction: column;
+    text-align: center;
+
+    .thank__img {
+      width: 8rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .thank-you__heading {
+      font-size: 3.2rem;
+      color: $demain__clr;
+      margin-bottom: 1.4rem;
+      font-weight: 700;
+      line-height: 3.87rem;
+    }
+
+    .thank-txt {
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2.5rem;
+    }
+  }
+}
